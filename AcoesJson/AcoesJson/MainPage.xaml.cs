@@ -21,7 +21,9 @@ namespace AcoesJson
         {
             var client = new HttpClient();
             string acao = edtAcao.Text;
-            var json = await client.GetStringAsync($"https://www.okanebox.com.br/api/acoes/hist/{acao}/20220515/20220523/");
+            string dtInicial = dpkDateInicial.Date.ToString("yyyyMMdd");
+            string dtFinal = dpkDateFinal.Date.ToString("yyyyMMdd");
+            var json = await client.GetStringAsync($"https://www.okanebox.com.br/api/acoes/hist/{acao}/{dtInicial}/{dtFinal}/");
 
             List<acoes> acoes = JsonConvert.DeserializeObject<List<acoes>>(json);
 

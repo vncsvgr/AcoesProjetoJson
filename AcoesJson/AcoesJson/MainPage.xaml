@@ -9,7 +9,16 @@
         </Frame>
 
         <Entry x:Name="edtAcao" Placeholder="Nome da Ação" />
-        <DatePicker x:Name="dpkDateInicial" />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Data Inicial" FontSize="16" TextColor="blue"></Label>
+            <DatePicker x:Name="dpkDateInicial" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Data Final" FontSize="16" TextColor="blue"></Label>
+            <DatePicker x:Name="dpkDateFinal" />
+        </StackLayout>
+        
 
         <Button x:Name="btnPesquisar" Text="Pesquisar" Clicked="btnPesquisar_Clicked" />
         

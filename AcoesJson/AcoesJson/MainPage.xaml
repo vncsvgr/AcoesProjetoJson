@@ -9,8 +9,10 @@
         </Frame>
 
         <Entry x:Name="edtAcao" Placeholder="Nome da Ação" />
+        <DatePicker x:Name="dpkDateInicial" />
 
         <Button x:Name="btnPesquisar" Text="Pesquisar" Clicked="btnPesquisar_Clicked" />
+        
 
         <ListView x:Name="lstAcoes">
             <ListView.ItemTemplate>

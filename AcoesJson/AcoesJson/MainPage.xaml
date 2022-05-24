@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AcoesJson.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Ações" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Entry x:Name="edtAcao" Placeholder="Nome da Ação" />
+
+        <Button x:Name="btnPesquisar" Text="Pesquisar" Clicked="btnPesquisar_Clicked" />
+
+        <ListView x:Name="lstAcoes">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="2*,3*, 3*">
+                            <Label Text="{Binding DATPRG}" />
+                            <Label Grid.Column="1" Text="{Binding PREABE}" />
+                            <Label Grid.Column="2" Text="{Binding PREULT}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
